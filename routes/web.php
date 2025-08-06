@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\RegisterForm;
 use App\Livewire\Users\UserAdd;
 use App\Livewire\Users\UserDetail;
 use App\Livewire\Users\UserList;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/users',UserList::class);
 Route::get('/users/view/{id}',UserDetail::class);
 Route::get('/users/add',UserAdd::class);
-
+Route::get('/users/register',RegisterForm::class);
 
 Route::view('/', 'welcome');
 

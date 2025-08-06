@@ -1,17 +1,19 @@
+<div class="mt-10 p-5 mx-auto sm:w-full sm:max-w-sm shadow border-teal-500 border-t-2">
+
 <form action="" wire:submit="save">
-<input type="text" class="w-full border rounded p-3" placeholder="Name" wire:model="name">
-<div class="text-red-600 text-sm mb-3">
+            <label for="" class="mt-3 block text-sm font-medium leading-6 text-gray-900">Name</label>
+    <input wire:model='name' type="text" id="name" placeholder="Name..." class="ring-1 ring-insect ring-gray-100 text-gray-900 text-sm rounded block w-full">
  @error('name')
-{{$message}}
+        <span class="text-red-500 text-xs">{{$message}}</span>
  @enderror
-</div>
-<input type="text" class="w-full border rounded p-3" placeholder="Email" wire:model="email">
-<div class="text-red-600 text-sm mb-3">
+     <label for="" class="mt-3 block text-sm font-medium leading-6 text-gray-900">Email</label>
+
+<input wire:model='email' type="email" id="email" placeholder="Email..." class="ring-1 ring-insect ring-gray-100 text-gray-900 text-sm rounded block w-full">
  @error('email')
-{{$message}}
+        <span class="text-red-500 text-xs">{{$message}}</span>
  @enderror
-</div>
-<button class="rounded bg-green-400 text-white py-2 px-6" type="submit">
+    <button class="block mt-3 px-4 py-2 bg-teal-500 text-white font-semibold rounded hover:bg-teal-600">+
     Add User
 </button>
 </form>
+</div>

@@ -25,9 +25,15 @@
             </header>
         </div>
     </div>
-    <div id="content" class="mx-auto" style="max-width:500px;">
-      @livewire('todo-list')
-    </div>
+
+
+            <div >
+                @livewire('users.user-list' ,['search'=>''])
+        </div>
+        {{-- <div class="w-2/4">
+                @livewire('register-form')
+        </div> --}}
+
 
 </body>
 
